@@ -31,25 +31,42 @@
     <div class="dictionary">
       <form action="search">
         <div>
-          <input type="search" placeholder="Enter a word..." />
-        </div>
-        <div>
-          <input type="submit" placeholder="Submit" />
+          <input
+            type="search"
+            placeholder="Enter a word..."
+            id="search-box"
+            class="search-input"
+          />
+
+          <input
+            type="submit"
+            value="Submit"
+            id="submit-btn"
+            class="search-button"
+          />
         </div>
       </form>
 
       <section>
-        <div>
-          <h1>Word</h1>
+        <div class="d-flex justify-content-between">
+          <div>
+            <h1 class="mt-5">Word</h1>
+          </div>
+          <div>
+            <i class="fa-solid fa-volume-high m-5"></i>
+          </div>
         </div>
         <div>
-          <i class="fa-solid fa-volume-high"></i>
-        </div>
-        <div>
-          <p>
-            /sample/ <br />
+          <p class="opacity-75">/sample/</p>
+          <p class="mt-5">
             The definition of the searched word, sourced from the api put in
             place.
+          </p>
+          <p class="word-example">
+            <em>
+              An example of the word searched, sourced from the api put in
+              place.
+            </em>
           </p>
         </div>
       </section>
