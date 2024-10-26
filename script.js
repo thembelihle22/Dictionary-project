@@ -4,16 +4,22 @@ function searchDictionary(response) {
   wordResult.innerHTML = response.data[0].word;
 
   let result = document.querySelector("#phonetic");
-  result.innerHTML = response.data[0].phonetics[1].text;
+  result.innerHTML = `/${response.data[0].phonetics[1].text}`;
 
   let speech = document.querySelector("#speech");
-  speech.innerHTML = response.data[0].meanings[0].partOfSpeech;
+  speech.innerHTML = ` /${response.data[0].meanings[0].partOfSpeech}`;
 
   let define = document.querySelector("#defined");
   define.innerHTML = response.data[0].meanings[0].definitions[0].definition;
 
   let defined = document.querySelector("#second-defined");
   defined.innerHTML = response.data[0].meanings[0].definitions[1].definition;
+
+  let synonym = document.querySelector("#synonym");
+  synonym.innerHTML = ` Synonyms: ${response.data[0].meanings[0].synonyms[0]}`;
+
+  let secondSynonym = document.querySelector("#second-synonym");
+  secondSynonym.innerHTML = `  /${response.data[0].meanings[0].synonyms[1]}`;
 }
 
 function dictionaryApi(word) {
