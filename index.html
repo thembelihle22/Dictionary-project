@@ -30,7 +30,7 @@
   </head>
   <body>
     <div class="dictionary">
-      <form action="search">
+      <form action="search" id="search">
         <div>
           <input
             type="search"
@@ -48,27 +48,31 @@
         </div>
       </form>
 
-      <section>
+      <section id="word-result">
         <div class="d-flex justify-content-between">
           <div>
-            <h1 class="mt-5">Word</h1>
+            <h1 class="mt-5" id="h1">Word</h1>
           </div>
           <div>
             <i class="fa-solid fa-volume-high m-5"></i>
           </div>
         </div>
         <div>
-          <p class="opacity-75">/sample/</p>
-          <p class="mt-5">
-            The definition of the searched word, sourced from the api put in
-            place.
-          </p>
-          <p class="word-example">
-            <em>
-              An example of the word searched, sourced from the api put in
+          <div class="d-flex justify-content-start opacity-75">
+            <p id="phonetic">/sample/</p>
+            <p id="speech">sample/</p>
+          </div>
+
+          <div>
+            <p class="word-example mt-5" id="defined">
+              The definition of the searched word, sourced from the api put in
               place.
-            </em>
-          </p>
+            </p>
+            <p class="word-example" id="second-defined">
+              The definition of the searched word, sourced from the api put in
+              place.
+            </p>
+          </div>
         </div>
       </section>
     </div>
