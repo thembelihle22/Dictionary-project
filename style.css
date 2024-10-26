@@ -3,7 +3,8 @@ body {
   max-width: 700px;
   margin: auto;
 }
-h1 {
+h1,
+h2 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -11,13 +12,21 @@ h1 {
 }
 p {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
+}
+.header {
+  background-color: white;
+  padding: 40px;
+  margin-top: 60px;
+}
+.header h2 {
+  font: 150px;
 }
 .dictionary {
   background-color: white;
   padding: 40px;
-  margin-top: 200px;
+  margin-top: 40px;
 }
 .form {
   margin-top: 5px;
@@ -47,4 +56,7 @@ p {
   border-left: 4px solid #dd7cea;
   margin-left: 25px;
   padding-left: 10px;
+}
+.synonyms {
+  color: #dd7cea;
 }

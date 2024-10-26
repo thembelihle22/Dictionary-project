@@ -20,6 +20,9 @@ function searchDictionary(response) {
 
   let secondSynonym = document.querySelector("#second-synonym");
   secondSynonym.innerHTML = `  /${response.data[0].meanings[0].synonyms[1]}`;
+
+  let sound = document.querySelector("#sound");
+  sound.innerHTML = `<audio src =${response.data[0].phonetics[0].audio}></audio>`;
 }
 
 function dictionaryApi(word) {
